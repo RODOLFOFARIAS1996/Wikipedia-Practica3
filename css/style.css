@@ -1,0 +1,432 @@
+
+/*algunos comentarios de las siguientes instrucciones:
+Box-Sizing, es para dar formato de caja
+margin, agrega un margen en una direccion
+padding, es el relleno interno de un elemento
+color, es el color que queremos darle a un elemento
+text-decoration, es para el efecto que queremos darle a un elemento texto (quitar subrayado por ejemplo)
+display, se usa para alinear un elemento
+flex-direction, se usa para darle formato de columna o linea a los elementos
+font-family, se usa para indicar la tipografia
+width se usa para indicar el ancho del elemento
+hight se usa para indicar el alto del elemento
+top se usa para el espacio del elemento de la parte de arriba
+left se usa para el espacio hacia la izquierda*/
+
+
+/*Formato para todo el documento en general*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #54595d;
+}
+/*para usar el 62.5% del tamaño dep antalla*/
+html {
+  font-size: 62.5%;
+}
+/*quitar subrayado a todos los textos*/
+a {
+  text-decoration: none;
+}
+/*contenedor principal*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/*el logo central*/
+.logo {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+}
+/*para ajustar la imagen al centro*/
+.logo-img {
+  width: 230px;
+  height: 183px;
+  position: absolute;
+  top: 158px;
+  left: -25px;
+}
+
+.wiki {
+  text-align: center;
+}
+/*el texto de wikipedia, formato*/
+.wiki-titulo {
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: black;
+}
+
+.wiki-subtitulo {
+  font-size: 1.4rem;
+  color: black;
+}
+
+.search-container {
+  width: 95%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+/*barra de busqueda de wikipedia*/
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px 0 0 2px;
+  width: 80%;
+  max-width: 335px;
+}
+
+.search-input {
+  height: 44px;
+  padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+  border: none;
+  outline: none;
+}
+
+.search-select {
+  width: 40px;
+  height: 24px;
+  margin-right: 10px;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0.2rem;
+}
+
+.search-button {
+  width: 56px;
+  height: 46px;
+  background-color: #0053f8;
+  background-image: url("https://raw.githubusercontent.com/wikimedia/portals/a53d8b9f468f3754fe9f8e2eb6f57d5bcf399269/dev/wikipedia.org/assets/img/sprite_assets/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.idiomas-container {
+  max-width: 580px;
+  display: flex;
+  flex-wrap: wrap;
+  order: 1;
+}
+
+.idiomas {
+  width: 33%;
+  height: 64px;
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.idiomas-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.idiomas-tipo {
+  color: #3366cc;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.idiomas-descripcion {
+  text-align: center;
+}
+
+.idiomas-detalles {
+  font-size: 1.3rem;
+}
+
+.main-footer-container {
+  order: 1;
+}
+
+.idioma {
+  width: 267.66px;
+  height: 36px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #3366cc;
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.idioma strong {
+  color: #3366cc;
+  font-size: 1.4rem;
+}
+
+.linea {
+  width: 90vw;
+  margin: 0 auto;
+  border-bottom: 1px solid #c8ccd1;
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.wikimedia {
+  margin: 10px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wikimedia-img {
+  width: 42px;
+  height: 42px;
+}
+
+.wikimedia-descripcion {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.descargar {
+  background-color: #f8f9fa;
+  padding-top: 10px;
+  order: 2;
+}
+
+.descargar-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descargar-img {
+  width: 29.4px;
+  height: 29.4px;
+}
+
+.descargar-descripcion {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.descargar-anuncio {
+  margin: 20px 10px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.descargar-apps {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.descargar-apps-img {
+  width: 124px;
+  height: 38px;
+}
+
+.app-container {
+  margin: 0 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  order: 1;
+}
+
+.app {
+  width: 50%;
+  max-width: 234.42px;
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: start;
+}
+
+.app-img {
+  width: 50px;
+}
+
+.app-detalles {
+  margin-left: 5px;
+}
+
+.app-titulo {
+  font-size: 1.3rem;
+  color: #3366cc;
+}
+
+.app-descripcion {
+  font-size: 1.3rem;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+footer a {
+  color: #3366cc;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+  .idiomas-container {
+    margin: 20px 0;
+    width: 479px;
+    min-height: 325px;
+    order: 0;
+    position: relative;
+  }
+
+  
+  .idiomas-tipo {
+    font-size: 1.6rem;
+  }
+
+  .idiomas {
+    min-width: 100px;
+  }
+
+  .left-1 {
+    position: absolute;
+    left: 80px;
+    top: 10px;
+  }
+
+  .right-1 {
+    position: absolute;
+    right: 60px;
+    top: 10px;
+  }
+
+  .left-2 {
+    position: absolute;
+    left: -1px;
+    top: 80px;
+  }
+
+  .right-2 {
+    position: absolute;
+    right: -5px;
+    top: 80px;
+  }
+
+  .left-3 {
+    position: absolute;
+    left: -20px;
+    top: 150px;
+  }
+
+  .right-3 {
+    position: absolute;
+    right: -20px;
+    top: 150px;
+  }
+
+  .left-4 {
+    position: absolute;
+    left: -10px;
+    top: 210px;
+  }
+
+  .right-4 {
+    position: absolute;
+    right: -10px;
+    top: 210px;
+  }
+
+  .left-5 {
+    position: absolute;
+    left: 40px;
+    top: 280px;
+  }
+
+  .right-5 {
+    position: absolute;
+    right: 35px;
+    top: 280px;
+  }
+
+  .search-container {
+    margin-bottom: 30px;
+  }
+
+  .idioma {
+    margin-bottom: 30px;
+  }
+
+  .app {
+    width: 33%;
+  }
+
+  .main-footer {
+    position: relative;
+    margin: 1%;
+  }
+
+  .wikimedia {
+    width: 33%;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .wikimedia-description {
+    margin: 0;
+    margin-left: 10px;
+  }
+
+  .descargar {
+    width: 33%;
+    order: 1;
+    margin-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .descargar-anuncio {
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 40px;
+  }
+
+  .descargar-apps {
+    margin-left: 35px;
+  }
+
+  .app-container {
+    width: 65%;
+    margin-top: 0;
+    position: absolute;
+    transform: translate(50%, 20px);
+  }
+.wikimedia-icon{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  object-fit: contain;
+}
